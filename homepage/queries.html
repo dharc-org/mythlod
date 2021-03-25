@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Full Width Pics - Start Bootstrap Template</title>
+		<!-- Bootstrap core CSS -->
+		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="css/full-width-pics.css" rel="stylesheet">
+
+		<style>
+			h2 {padding-top:2.5rem;}
+			h3 {padding-top:2rem;}
+			h4 {padding-top:1.5rem;}
+			h5 {padding-top:1rem;}
+			
+			h1,h2,h3,h4,h5 {font-weight: 150 !important;}
+						
+			.container-fluid {padding: 2rem; text-align: justify;}
+			
+			#page-content-wrapper img {max-width:100%!important; padding-left:4rem; padding-right: 4rem; padding-top:2rem; padding-bottom:2rem}
+			#page-content-wrapper {
+				padding-left:2rem; padding-right:2rem; 
+				min-width: 0;
+				width: 100%;
+				background-color: white;
+				font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+				font-size: 0.8rem;
+				min-width: 100vw;}
+			
+				body {background-color:white !important}
+
+				.col-sm-4 {padding:0.5em !important}
+			
+			</style>
+
+	</head>
+	<body>
+
+		            <!-- Navigation -->
+					<nav class="navbar navbar-expand-md navbar-light bg-light">
+						<a class="navbar-brand" href="mima.html"><img src="images/favicon.svg" alt="" style="width:22%;"/>mythLOD <small>- KO </small></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarResponsive">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item dropdown navbar-light bg-light">
+								  <a class="nav-link dropdown-toggle" href="mima.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									knowledge organisation
+								  </a>
+								  <div class="dropdown-menu navbar-light bg-light w-100" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item navbar-light bg-light w-100" href="datamodel.html">datamodel</a>
+									<a class="dropdown-item navbar-light bg-light w-100" href="dataset.html">dataset</a>
+									<a class="dropdown-item navbar-light bg-light w-100" href="queries.html">queries</a>
+								  </div>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="../catalogue/index.html">collection</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="../storytelling/index.html">storytelling</a>
+								  </li>
+								
+								<li class="nav-item">
+									<a class="nav-link page-scroll" href="index.html#doc">contacts</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<div id="page-content-wrapper">
+            
+						<div class="container-fluid">
+					<h1 id="mythologiae-queries">Queries on the dataset</h1>
+				The following SPARQL queries want to present several competency questions designed in order to represent the Mythologiae project representational requirements in both natuaral and formal (SPARQL and RDF) languages.
+				Each query has been run over Mythologiae RDF dataset, which is available <a href="https://raw.githubusercontent.com/ValentinaPasqual/mythologiae/main/dataset.trig" target="_blank">here</a> or pleas go to knowledge organisation > dataset.
+		</div></div>
+
+		<!-- first query row -->
+		<div class="query-container ">
+
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the descriptional metadata for the cultural object 148?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT *
+WHERE {
+  graph myth:factual_data {
+    {<https://dharc-org.github.io/mythologiae/item/148-creation> ?p ?o.}
+    UNION
+    {<https://dharc-org.github.io/mythologiae/item/148> ?p ?o . }
+    UNION
+    {<https://dharc-org.github.io/mythologiae/item/148-expression> ?p ?o . }}}
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-kr4b">p<br></th>
+										<th class="tg-rdtm">o<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-xm9z"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdf:type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/F28_Expression_Creation"><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:F28_Expression_Creation</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="http://erlangen-crm.org/current/P10_falls_within"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P10_falls_within</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/time/arte-moderna"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:time/arte-moderna</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="http://erlangen-crm.org/current/P14_carried_out_by"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P14_carried_out_by</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/davent-leon"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/davent-leon</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="http://erlangen-crm.org/current/P4_has_time_span"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P4_has_time_span</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/time/xvi-secolo"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:time/xvi-secolo</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="http://erlangen-crm.org/current/P4_has_time_span"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P4_has_time_span</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/time/1540-1545"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:time/1540-1545</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/R18_<td class="tg-hcj8 text-break""><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:R18_created</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/item/148"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:item/148</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/R18_<td class="tg-hcj8 text-break""><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:R18_created</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/item/148-expression"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:item/148-expression</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdf:type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/F4_Manifestation_Singleton"><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:F4_Manifestation_Singleton</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/current/P2_has_type"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P2_has_type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/type/arti-minori"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:type/arti-minori</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/current/P55_has_current_location"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P55_has_current_location</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/place/the-metropolitan-museum-of-art"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:place/the-metropolitan-museum-of-art</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://purl.org/dc/terms/note"><span style="text-decoration:none;color:#428BCA;background-color:initial">dct:note</span></a></td>
+										<td class="tg-citn">"Stampa "</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://purl.org/dc/terms/subject"><span style="text-decoration:none;color:#428BCA;background-color:initial">dct:subject</span></a></td>
+										<td class="tg-citn">"odisseo"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://purl.org/dc/terms/subject"><span style="text-decoration:none;color:#428BCA;background-color:initial">dct:subject</span></a></td>
+										<td class="tg-citn">"circe"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://purl.org/dc/terms/subject"><span style="text-decoration:none;color:#428BCA;background-color:initial">dct:subject</span></a></td>
+										<td class="tg-citn">"aiuto"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://purl.org/dc/terms/subject"><span style="text-decoration:none;color:#428BCA;background-color:initial">dct:subject</span></a></td>
+										<td class="tg-citn">"davent"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://purl.org/dc/terms/title"><span style="text-decoration:none;color:#428BCA;background-color:initial">dct:title</span></a></td>
+										<td class="tg-citn">"Circe che beve"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://schema.org/image"><span style="text-decoration:none;color:#428BCA;background-color:initial">schema:image</span></a></td>
+										<td class="tg-citn">"2019/04/circe-che-beve-davent.jpg"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdf:type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/F2_Expression"><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:F2_Expression</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://purl.org/dc/terms/description"><span style="text-decoration:none;color:#428BCA;background-color:initial">dct:description</span></a></td>
+										<td class="tg-citn">"Ermes aiuta Odisseo contro l'incantesimo di Circe"</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the descriptional metadata for the work Aeneis by Virgil?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT *
+WHERE {
+    graph myth:factual_data {
+    {<https://dharc-org.github.io/mythologiae/work/virgil-aeneis> ?p ?o.}
+    UNION
+    {<https://dharc-org.github.io/mythologiae/item/virgil-aeneis-conception> ?p ?o . }
+
+
+</code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">p<br></th>
+										<th class="tg-rdtm">o<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdf:type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/F1_Work"><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:F1_Work</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/2000/01/rdf-schema#label"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdfs:label</span></a></td>
+										<td class="tg-citn">"P. Vergilius Maro, Aeneid"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/2000/01/rdf-schema#label"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdfs:label</span></a></td>
+										<td class="tg-citn">"Virgil. | Aeneis"</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/current/P2_has_type"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P2_has_type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/fonteClassica"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:fonteClassica</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/2000/01/rdf-schema#seeAlso"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdfs:seeAlso</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="http://data.perseus.org/texts/urn:cts:latinLit:phi0690.phi003"><span style="text-decoration:none;color:#428BCA;background-color:initial">&lt;http://data.perseus.org/texts/urn:cts:latinLit:phi0690.phi003&gt;</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/2002/07/owl#sameAs"><span style="text-decoration:none;color:#428BCA;background-color:initial">owl:sameAs</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="http://viaf.org/viaf/313680866"><span style="text-decoration:none;color:#428BCA;background-color:initial">&lt;http://viaf.org/viaf/313680866&gt;</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/current/:P2_has_type"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm::P2_has_type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/fonteClassica"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:fonteClassica</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"><span style="text-decoration:none;color:#428BCA;background-color:initial">rdf:type</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/F27_Work_Conception"><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:F27_Work_Conception</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/current/P14_carried_out_by"><span style="text-decoration:none;color:#428BCA;background-color:initial">ecrm:P14_carried_out_by</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/virgil"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/virgil</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"><a href="http://erlangen-crm.org/efrbroo/R16_initiated"><span style="text-decoration:none;color:#428BCA;background-color:initial">efrbroo:R16_initiated</span></a></td>
+										<td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/work/virgil-aeneis"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/virgil-aeneis</span></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the cultural objects which represent a category (scene) presented also in Aeneis by Virgil?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?category ?item ?title
+WHERE {
+
+graph myth:factual_data { 
+?item_expr a efrbroo:F2_Expression. 
+?item a efrbroo:F4_Manifestation_Singleton .
+?creation efrbroo:R18_created ?item_expr, ?item .
+?item dct:title ?title . 
+?work a efrbroo:F1_Work .
+?assertion a np:Assertion . }
+
+graph ?assertion {
+?itemExpr ecrm:P67_refers_to ?category.
+    ?work ecrm:P67_refers_to ?category}}
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-kr4b">category<br></th>
+										<th class="tg-kr4b">item<br></th>
+										<th class="tg-kr4b">title<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/categ/antigone-sul-sepolcro-di-policine"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/antigone-sul-sepolcro-di-policine</span></a></td>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/item/303"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:item/303</span></a></td>
+										<td class="tg-acii">"Antigone vede il cadavere di Polinice scoperto"</td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/categ/antigone-sul-sepolcro-di-policine"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/antigone-sul-sepolcro-di-policine</span></a></td>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/item/405"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:item/405</span></a></td>
+										<td class="tg-acii">"Antigone e Ismene sul sepolcro di Polinice"</td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/categ/arianna-e-dioniso-sincontrano"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-e-dioniso-sincontrano</span></a></td>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/item/36"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:item/36</span></a></td>
+										<td class="tg-acii">"Dioniso e Arianna pittura vascolare"</td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/categ/arianna-viene-abbandonata-da-teseo"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-viene-abbandonata-da-teseo</span></a></td>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/item/496"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:item/496</span></a></td>
+										<td class="tg-acii">"Arianna e le arti minori"</td>
+									</tr>
+									<tr>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/categ/didone"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/didone</span></a></td>
+										<td class="tg-xm9z"><a href="https://dharc-org.github.io/mythologiae/item/357"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:item/357</span></a></td>
+										<td class="tg-acii">"Didone sogna Sicheo"</td>
+									</tr>
+								</tbody>
+							</table>
+							<p style="font-size:80%">**Here are presented 5 out of 204 results</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- second query row -->
+		<div class="query-container bg-light">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the passages cited from Metamorphoses by Ovid?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?element (COUNT(?cit) as ?n_cit)
+WHERE {
+    graph myth:factual_data {
+    <https://dharc-org.github.io/mythologiae/str/ovid-metamorphoses> hucit:has_element ?element.
+    ?cit hucit:has_content ?element.
+    }
+    graph ?assertion {?cit ecrm:P67_refers_to ?categ}}
+
+GROUP BY ?cit ?element ORDER BY DESC (?n_cit)
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">element<br></th>
+										<th class="tg-rdtm">n_cit<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-176-177"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-176-177</span></a></td>
+										<td class="tg-citn">"47"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-174"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-174</span></a></td>
+										<td class="tg-citn">"42"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VII-1-158"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VII-1-158</span></a></td>
+										<td class="tg-citn">"16"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-177-179"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-177-179</span></a></td>
+										<td class="tg-citn">"13"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-1-424"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-1-424</span></a></td>
+										<td class="tg-citn">"7"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/III-55-94"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/III-55-94</span></a></td>
+										<td class="tg-citn">"6"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-260-444"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-260-444</span></a></td>
+										<td class="tg-citn">"5"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VII-11-73"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VII-11-73</span></a></td>
+										<td class="tg-citn">"4"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VII-159-293"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VII-159-293</span></a></td>
+										<td class="tg-citn">"4"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/XIV-581-608"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/XIV-581-608</span></a></td>
+										<td class="tg-citn">"3"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VII-391-404"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VII-391-404</span></a></td>
+										<td class="tg-citn">"2"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VII-297-351"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VII-297-351</span></a></td>
+										<td class="tg-citn">"1"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-176-181"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-176-181</span></a></td>
+										<td class="tg-citn">"1"^^xsd:integer</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the categories represented by each of the citations from Metamorphoses by Ovid? And how many times do they occurr?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?element (COUNT(?cit) as ?n_cit) ?categ
+WHERE {
+    graph myth:factual_data {
+    <https://dharc-org.github.io/mythologiae/str/ovid-metamorphoses> hucit:has_element ?element.
+    ?cit hucit:has_content ?element.
+    }
+    graph ?assertion {?cit ecrm:P67_refers_to ?categ}}
+
+GROUP BY ?cit ?element ?categ ORDER BY DESC (?n_cit)
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">element<br></th>
+										<th class="tg-rdtm">n_cit<br></th>
+										<th class="tg-rdtm">categ<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-176-177"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-176-177</span></a></td>
+										<td class="tg-citn">"37"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/arianna-e-dioniso-sincontrano"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-e-dioniso-sincontrano</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-174"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-174</span></a></td>
+										<td class="tg-citn">"20"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/arianna-principessa-di-cnosso"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-principessa-di-cnosso</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VII-1-158"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VII-1-158</span></a></td>
+										<td class="tg-citn">"13"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/il-furto-del-vello-doro"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/il-furto-del-vello-doro</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-177-179"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-177-179</span></a></td>
+										<td class="tg-citn">"10"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/arianna-e-dioniso-si-sposano"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-e-dioniso-si-sposano</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-174"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-174</span></a></td>
+										<td class="tg-citn">"8"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/arianna-viene-abbandonata-da-teseo"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-viene-abbandonata-da-teseo</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-174"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-174</span></a></td>
+										<td class="tg-citn">"7"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/arianna-aiuta-teseo-ad-uscire-dal-labirinto"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-aiuta-teseo-ad-uscire-dal-labirinto</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-176-177"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-176-177</span></a></td>
+										<td class="tg-citn">"5"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/arianna-tra-satiri-menadi-e-altre-figure-mitologiche"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/arianna-tra-satiri-menadi-e-altre-figure-mitologiche</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/III-55-94"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/III-55-94</span></a></td>
+										<td class="tg-citn">"5"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/cadmo-contro-il-drago"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/cadmo-contro-il-drago</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-1-424"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-1-424</span></a></td>
+										<td class="tg-citn">"5"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/giasone-corteggia-medea"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/giasone-corteggia-medea</span></a></td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/str/VIII-260-444"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:str/VIII-260-444</span></a></td>
+										<td class="tg-citn">"5"^^xsd:integer</td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/meleagro"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/meleagro</span></a></td>
+									</tr>
+								</tbody>
+							</table>
+							<p style="font-size:80%">**Here are presented just 10 out of 32 elements</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the works which refer to the supercategory "Enea"? And which are the specific categories to which each work refers to?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?work ?categ (COUNT(?work) as ?n_cit)
+WHERE {
+    graph myth:factual_data { ?categ ecrm:P67_refers_to <https://dharc-org.github.io/mythologiae/categ/enea> .
+    ?work a efrbroo:F1_Work.}
+    graph ?assertion1 {?work ecrm:P67_refers_to ?categ}
+}
+GROUP BY ?work ?categ ORDER BY DESC (?n_cit)
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">work<br></th>
+										<th class="tg-rdtm">categ<br></th>
+										<th class="tg-rdtm">n_cit<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/virgil-aeneis"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/virgil-aeneis</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"44"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/alighieri-dante-divina-commedia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/alighieri-dante-divina-commedia</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/leopardi-giacomo-canti"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/leopardi-giacomo-canti</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/petrarca-francesco-trionfi"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/petrarca-francesco-trionfi</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/ungaretti-giuseppe-vita-d-un-uomo"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/ungaretti-giuseppe-vita-d-un-uomo</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/alighieri-dante-divina-commedia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/alighieri-dante-divina-commedia</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/leopardi-giacomo-canti"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/leopardi-giacomo-canti</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/petrarca-francesco-trionfi"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/petrarca-francesco-trionfi</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/ungaretti-giuseppe-vita-d-un-uomo"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/ungaretti-giuseppe-vita-d-un-uomo</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/virgil-aeneis"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/virgil-aeneis</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+								</tbody>
+							</table>
+							<p style="font-size: 80%;">**Here are presented just 10 out of 86 results</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- third query row -->
+		<div class="query-container bg-light">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which and how many times are the 5 most cited conceptual categories by Virgil's Aeneid?</p>
+							<pre class="w-100"><code>
+SELECT ?categ (COUNT(ecrm:P67_refers_to) as ?n_assertion)
+WHERE {
+graph ?assertion {<https://dharc-org.github.io/mythologiae/work/virgil-aeneis> ecrm:P67_refers_to ?categ}  
+graph myth:factual_data {?categ a ecrm:E1_CRM_Entity. ?assertion a np:Assertion }
+}  
+
+GROUP BY ?categ ORDER BY DESC (?n_assertion) 
+LIMIT 5
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th>categ</th>
+										<th>n_assertion</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-break">myth:categ/enea-fugge-da-troia</td>
+										<td class="text-break">"44"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:categ/suicidio-di-didone</td>
+										<td class="text-break">"30"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:categ/enea-e-didone-innamorati</td>
+										<td class="text-break">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:categ/enea-nella-penisola-italica</td>
+										<td class="text-break">"12"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:categ/didone</td>
+										<td class="text-break">"11"^^xsd:integer</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">
+								For what concern "Didone" conceptual category, which are the associated literary sources? And which is their type? 
+							</p>
+							<pre class="w-100"><code>
+
+SELECT ?work ?type (COUNT(?work) as ?n_work)
+WHERE { 
+    graph ?assertion {?work ecrm:P67_refers_to <https://dharc-org.github.io/mythologiae/categ/didone>}
+    graph myth:factual_data {?work a efrbroo:F1_Work; 
+                                ecrm:P2_has_type ?type}
+    }
+
+GROUP BY ?work ?type ORDER BY DESC (?n_work)
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th>work</th>
+										<th>type</th>
+										<th>n_work</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-break">myth:work/virgil-aeneis</td>
+										<td class="text-break">myth:type/fonteClassica</td>
+										<td class="text-break">"12"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:work/ungaretti-giuseppe-vita-d-un-uomo</td>
+										<td class="text-break">myth:type/riscritturaLetteraria</td>
+										<td class="text-break">"12"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:work/alighieri-dante-divina-commedia</td>
+										<td class="text-break">myth:type/fonteMedievaleOModerna</td>
+										<td class="text-break">"11"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:work/petrarca-francesco-trionfi</td>
+										<td class="text-break">myth:type/fonteMedievaleOModerna</td>
+										<td class="text-break">"11"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:work/leopardi-giacomo-canti</td>
+										<td class="text-break">myth:type/riscritturaLetteraria</td>
+										<td class="text-break">"11"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:work/purcell-henry-dido-and-aeneas</td>
+										<td class="text-break">myth:type/riscritturaLetteraria</td>
+										<td class="text-break">"11"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:work/marmontel-jean-franacois-didon</td>
+										<td class="text-break">myth:type/riscritturaLetteraria</td>
+										<td class="text-break">"10"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="text-break">myth:work/metastasio-pietro-didone-abbandonata</td>
+										<td class="text-break">myth:type/riscritturaLetteraria</td>
+										<td class="text-break">"10"^^xsd:integer</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the most cited works in the dataset in relation to their cited categories?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?work ?categ (COUNT(?work) as ?n_cit)
+WHERE {
+    graph myth:factual_data { ?categ ecrm:P67_refers_to <https://dharc-org.github.io/mythologiae/categ/enea> .
+    ?work a efrbroo:F1_Work.}
+    graph ?assertion1 {?work ecrm:P67_refers_to ?categ}
+}
+GROUP BY ?work ?categ ORDER BY DESC (?n_cit)
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">work<br></th>
+										<th class="tg-rdtm">categ<br></th>
+										<th class="tg-rdtm">n_cit<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/virgil-aeneis"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/virgil-aeneis</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"44"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/alighieri-dante-divina-commedia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/alighieri-dante-divina-commedia</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/leopardi-giacomo-canti"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/leopardi-giacomo-canti</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/petrarca-francesco-trionfi"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/petrarca-francesco-trionfi</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/ungaretti-giuseppe-vita-d-un-uomo"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/ungaretti-giuseppe-vita-d-un-uomo</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-fugge-da-troia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-fugge-da-troia</span></a></td>
+										<td class="tg-citn">"43"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/alighieri-dante-divina-commedia"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/alighieri-dante-divina-commedia</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/leopardi-giacomo-canti"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/leopardi-giacomo-canti</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/petrarca-francesco-trionfi"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/petrarca-francesco-trionfi</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/ungaretti-giuseppe-vita-d-un-uomo"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/ungaretti-giuseppe-vita-d-un-uomo</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+									<tr>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/work/virgil-aeneis"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:work/virgil-aeneis</span></a></td>
+										<td class="tg-hcj8 text-break"<a href="https://dharc-org.github.io/mythologiae/categ/enea-e-didone-innamorati"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/enea-e-didone-innamorati</span></a></td>
+										<td class="tg-citn">"14"^^xsd:integer</td>
+									</tr>
+								</tbody>
+							</table>
+							<p style="font-size: 80%;">**Here are presented just 10 out of 86 results</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <!-- fourth row -->
+        <div class="query-container bg-light">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which interpretation acts are hermeneutic analyses in the dataset?</p>
+							<pre class="w-100"><code>
+SELECT ?intAct 
+WHERE {
+    graph myth:factual_data {?provenance a np:Provenance}
+    graph ?provenance {
+    ?intAct hico:hasInterpretationCriterion myth:hermeneutic-analysis}
+}
+GROUP BY ?intAct ORDER BY DESC (?n_intAct)
+                            </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+                                        <th class="tg-rdtm">intAct<br></th>
+									</tr>
+								</thead>
+								<tbody>
+                                    <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1000"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1000</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1001"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1001</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1002"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1002</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1003"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1003</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1004"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1004</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1005"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1005</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1006"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1006</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1007"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1007</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1008"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1008</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1009"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1009</span></a></td>
+                                      </tr>
+                                    </tbody>
+								</tbody>
+                            </table>
+                            <p style="font-size: 80%;">**Here are presented just 10 out of 3,759 results</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which interpretation acts are classified as "sources associations" in the dataset?</p>
+							<pre class="w-100"><code>
+SELECT ?intAct 
+WHERE {
+    graph myth:factual_data {?provenance a np:Provenance}
+    graph ?provenance {
+    ?intAct hico:hasInterpretationCriterion myth:sources-association}
+}
+GROUP BY ?intAct ORDER BY DESC (?n_intAct)
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+                                        <th class="tg-rdtm">intAct<br></th>
+									</tr>
+								</thead>
+								<tbody>
+                                    <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/1"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/1</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/10"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/10</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/100"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/100</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/101"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/101</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/102"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/102</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/103"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/103</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/104"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/104</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/105"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/105</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/106"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/106</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/int-act/107"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:int-act/107</span></a></td>
+                                      </tr>
+								</tbody>
+                            </table>
+                            <p style="font-size: 80%;">**Here are presented just 10 out of 589 results</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">How many interpretations has been performed starting from 2019?</p>
+							<pre class="w-100"><code>
+SELECT ?intAct ?date
+WHERE {
+    graph myth:factual_data {?provenance a np:Provenance}
+    graph ?provenance {
+    ?intAct prov:wasGeneratedAtTime ?date}
+    FILTER( ?date >= xsd:dateTime("2019-01-01T00:00:00"))
+}
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">intAct<br></th>
+                                        <th class="tg-rdtm">date<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion2727"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion2727</span></a></td>
+                                        <td class="tg-citn">"2019-04-30T09:08:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion1601"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion1601</span></a></td>
+                                        <td class="tg-citn">"2019-04-15T09:17:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion463"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion463</span></a></td>
+                                        <td class="tg-citn">"2019-04-11T15:24:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion106"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion106</span></a></td>
+                                        <td class="tg-citn">"2020-05-28T15:09:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion454"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion454</span></a></td>
+                                        <td class="tg-citn">"2019-05-22T15:43:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion2260"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion2260</span></a></td>
+                                        <td class="tg-citn">"2019-05-08T11:39:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion747"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion747</span></a></td>
+                                        <td class="tg-citn">"2019-06-17T10:04:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion350"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion350</span></a></td>
+                                        <td class="tg-citn">"2019-05-08T13:11:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion54"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion54</span></a></td>
+                                        <td class="tg-citn">"2020-06-10T19:39:00"^^xsd:dateTime</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/assertion197"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:assertion197</span></a></td>
+                                        <td class="tg-citn">"2019-05-02T07:25:00"^^xsd:dateTime</td>
+                                      </tr>
+								</tbody>
+							</table>
+							<p style="font-size:80%">**Here are presented 10 out of 1768 results</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="query-container bg-light">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Who are the domain experts who worked at the interpretations in the dataset?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?person 
+WHERE {
+    graph myth:factual_data {?provenance a np:Provenance}
+    graph ?provenance {
+    ?intAct prov:wasAttributedTo ?person}
+}
+        
+GROUP BY ?person 
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+                                        <th class="tg-rdtm">person<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/vera-vitartali"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/vera-vitartali</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/manuela"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/manuela</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/angelica-piras"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/angelica-piras</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/martina-morelli"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/martina-morelli</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/alessandro-iannucci"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/alessandro-iannucci</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/caterina-cavicchi"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/caterina-cavicchi</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/gamba-hubert"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/gamba-hubert</span></a></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8 text-break"><a href="https://dharc-org.github.io/mythologiae/person/laura-cardi"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:person/laura-cardi</span></a></td>
+                                      </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">When does the dataset nanopublications has been produced?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?date 
+WHERE {
+    graph myth:factual_data {?pubInfo a np:PublicationInfo}
+    graph ?pubInfo {
+    ?np prov:wasGeneratedAtTime ?date}
+}
+
+
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">date<br></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="tg-citn">"2020-08-24T09:00:00"^^xsd:dateTime</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="card h-100">
+						<div class="card-body">
+							<p class="card-text">Which are the 3 most represented categories by items which has been produced during Modern Art period?</p>
+							<pre class="w-100"><code>
+SELECT DISTINCT ?category (COUNT(?item_expr) AS ?n_item_expr)
+WHERE {
+        graph ?assertion {?item_expr ecrm:P67_refers_to ?category}
+    
+    graph myth:factual_data { 
+    ?creation efrbroo:R18_created ?item_expr; 
+            ecrm:P10_falls_within <https://dharc-org.github.io/mythologiae/time/arte-moderna> .
+    ?item_expr a efrbroo:F2_Expression}}
+GROUP BY ?category ORDER BY DESC (?n_item_expr)
+LIMIT 3                                
+                                </code></pre>
+							<table class="table w-100">
+								<thead>
+									<tr>
+										<th class="tg-rdtm">category<br></th>
+                                        <th class="tg-rdtm">n_item_expr<br></th>
+									</tr>
+								</thead>
+								<tbody>
+                                    <tr>
+                                        <td class="tg-hcj8"><a href="https://dharc-org.github.io/mythologiae/categ/gli-dei"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/gli-dei</span></a></td>
+                                        <td class="tg-citn">"716"^^xsd:integer</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8"><a href="https://dharc-org.github.io/mythologiae/categ/saghe-familiari-e-epiche"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/saghe-familiari-e-epiche</span></a></td>
+                                        <td class="tg-citn">"201"^^xsd:integer</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="tg-hcj8"><a href="https://dharc-org.github.io/mythologiae/categ/eros"><span style="text-decoration:none;color:#428BCA;background-color:initial">myth:categ/eros</span></a></td>
+                                        <td class="tg-citn">"200"^^xsd:integer</td>
+                                      </tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer class="py-3 bg-light" style="font-size:0.7em; background-color:white !Important">
+			<div class="row pl-5 pr-5 mt-1 mb-0">
+			  <div class="col-md-6 pl-5 pr-5">
+				<div class="row">
+				  <div class="col-6 pb-1">
+					<img src="../vendor/Logo_Progetto_IDEHA.png" style="max-width: 5rem; max-height: 4rem;margin-right: auto; margin-left: auto; display:block">
+				  </div>
+				  <div class="col-6 pb-1">
+					<img src="../vendor/unibo_logo.png" style="max-width: 5rem; max-height: 4rem; margin-right: auto; margin-left: auto; display:block">
+				  </div>
+				  <img src="../vendor/pon_logo.png" style="max-width:100%">
+				</div>
+			  </div>
+			  <div class="col-md-3 pl-5 pr-5"><h6>Contatti</h6>
+				<p>Università di Bologna<br>
+				  Dipartimento di Filologia Classica e Italianistica <a href="https://ficlit.unibo.it/it">(FICLIT)</a><br>
+				  Via Zamboni 32<br>
+				  40126 Bologna, Italia</p>
+				<p>
+				  <strong>Email:</strong>
+				  <a class="email-link" href="mailto:dharc@live.unibo.it">dharc@live.unibo.it</a>
+				</p>
+			  </div>
+			  <div class="col-md-3 pl-5 pr-5">
+				<p class="m-0">Images in mythLOD website has been reused from <a href="https://patrimonioculturale.unibo.it/mythologiae/">Mythologiae</a> digital collection</p>
+				<br>
+				<p class="m-0">&copy 2021 <a href="https://centri.unibo.it/dharc/en">/DH.arc</a> - mythLOD | dataset DOI: | <a href="../homepage/credits.html">Credits</a> <br><br>
+				  <img alt="Licenza Creative Commons" style="border-width:0; max-height: 5rem;margin-right: auto; margin-left: auto; display:block" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png"></p>
+			  </div>
+			</div> 
+		  </footer>
+		<!-- Bootstrap core JavaScript -->
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

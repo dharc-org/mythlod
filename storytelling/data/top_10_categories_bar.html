@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js" integrity="sha384-kLr4fYcqcSpbuI95brIH3vnnYCquzzSxHPU6XGQCIkQRGJwhg0StNbj1eegrHs12" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="a40da0c4-a78f-477b-90f5-88cd05383025" data-root-id="3770"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="3878">
+          {"6e0b1035-efd8-4af4-8961-c400275c7e17":{"roots":{"references":[{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"top"},"width":{"value":0.5},"x":{"field":"x"}},"id":"3790","type":"VBar"},{"attributes":{"axis":{"id":"3781"},"grid_line_color":null,"ticker":null},"id":"3783","type":"Grid"},{"attributes":{"axis":{"id":"3784"},"dimension":1,"ticker":null},"id":"3787","type":"Grid"},{"attributes":{"source":{"id":"3789"}},"id":"3793","type":"CDSView"},{"attributes":{},"id":"3785","type":"BasicTicker"},{"attributes":{"axis_label_text_font_size":"5px","formatter":{"id":"3798"},"major_label_orientation":"vertical","ticker":{"id":"3782"}},"id":"3781","type":"CategoricalAxis"},{"attributes":{"data":{"top":[158,152,83,41,38,37,34,33,30,30],"x":["Enea fugge da Troia in fiamme","Morte di Didone","Enea e Didone innamorati","Enea nella penisola italica","Enea si rivela a Didone","Didone","Enea negli inferi","Enea abbandona Didone","Enea e Acate sulla costa libica","Venere e l'armatura di Enea"]},"selected":{"id":"3800"},"selection_policy":{"id":"3799"}},"id":"3789","type":"ColumnDataSource"},{"attributes":{"below":[{"id":"3781"}],"center":[{"id":"3783"},{"id":"3787"}],"left":[{"id":"3784"}],"plot_height":400,"plot_width":300,"renderers":[{"id":"3792"}],"title":{"id":"3771"},"toolbar":{"id":"3788"},"toolbar_location":null,"x_range":{"id":"3773"},"x_scale":{"id":"3777"},"y_range":{"id":"3775"},"y_scale":{"id":"3779"}},"id":"3770","subtype":"Figure","type":"Plot"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto"},"id":"3788","type":"Toolbar"},{"attributes":{"data_source":{"id":"3789"},"glyph":{"id":"3790"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"3791"},"selection_glyph":null,"view":{"id":"3793"}},"id":"3792","type":"GlyphRenderer"},{"attributes":{"axis_label_text_font_size":"5px","formatter":{"id":"3796"},"ticker":{"id":"3785"}},"id":"3784","type":"LinearAxis"},{"attributes":{},"id":"3777","type":"CategoricalScale"},{"attributes":{"text":""},"id":"3771","type":"Title"},{"attributes":{},"id":"3800","type":"Selection"},{"attributes":{},"id":"3798","type":"CategoricalTickFormatter"},{"attributes":{"factors":["Enea fugge da Troia in fiamme","Morte di Didone","Enea e Didone innamorati","Enea nella penisola italica","Enea si rivela a Didone","Didone","Enea negli inferi","Enea abbandona Didone","Enea e Acate sulla costa libica","Venere e l'armatura di Enea"]},"id":"3773","type":"FactorRange"},{"attributes":{},"id":"3799","type":"UnionRenderers"},{"attributes":{},"id":"3779","type":"LinearScale"},{"attributes":{"start":0},"id":"3775","type":"DataRange1d"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"top"},"width":{"value":0.5},"x":{"field":"x"}},"id":"3791","type":"VBar"},{"attributes":{},"id":"3796","type":"BasicTickFormatter"},{"attributes":{},"id":"3782","type":"CategoricalTicker"}],"root_ids":["3770"]},"title":"Bokeh Application","version":"2.1.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('3878').textContent;
+                  var render_items = [{"docid":"6e0b1035-efd8-4af4-8961-c400275c7e17","root_ids":["3770"],"roots":{"3770":"a40da0c4-a78f-477b-90f5-88cd05383025"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

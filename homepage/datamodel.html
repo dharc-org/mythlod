@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Full Width Pics - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/full-width-pics.css" rel="stylesheet">
+
+    <style>
+    
+
+        body {
+  overflow-x: hidden;
+  padding-top:0px !important 
+}
+
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -22rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  background-color:#f8f9fa
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 22rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+    background-color: white;
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.8rem
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -22rem;
+  }
+}
+
+.list-group-item {background-color: transparent !important; font-size:0.8rem} 
+
+h2 {padding-top:2.5rem;}
+h3 {padding-top:2rem;}
+h4 {padding-top:1.5rem;}
+h5 {padding-top:1rem;}
+
+h1,h2,h3,h4,h5 {font-weight: 150;}
+
+#sidebar-wrapper {padding-top:2rem !important}
+
+.container-fluid {padding: 2rem; text-align: justify;}
+
+.list-group-flush>.list-group-item {border-width:0 0 0px; font-weight: 150;}
+#page-content-wrapper img {max-width:100%!important; padding-left:4rem; padding-right: 4rem; padding-top:2rem; padding-bottom:2rem}
+#page-content-wrapper {padding-left:2rem; padding-right:2rem}
+    </style>
+</head>
+<body>
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a class="navbar-brand" href="mima.html"><img src="images/favicon.svg" alt="" style="width:22%;"/>mythLOD <small>- KO</small></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown navbar-light bg-light">
+                          <a class="nav-link dropdown-toggle" href="mima.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            knowledge organisation
+                          </a>
+                          <div class="dropdown-menu navbar-light bg-light w-100" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item navbar-light bg-light w-100" href="datamodel.html">datamodel</a>
+                            <a class="dropdown-item navbar-light bg-light w-100" href="dataset.html">dataset</a>
+                            <a class="dropdown-item navbar-light bg-light w-100" href="queries.html">queries</a>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../catalogue/index.html">collection</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../storytelling/index.html">storytelling</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="index.html#doc">contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section class="Documentation" id="Documentation">
+
+            <div class="d-flex" id="wrapper">
+
+                <!-- Sidebar -->
+    <!---
+              <div class="border-right" id="sidebar-wrapper">
+                  <div class="list-group list-group-flush">
+                    <div class="sidebar-heading pt-5"><b>L'edizione digitale</b></div>
+                    <a href="#che-cos-la-piattaforma-vasto" class="list-group-item list-group-item-action ">Introduzione</a>
+                    <a href="#che-cos-la-piattaforma-vasto-2" class="list-group-item list-group-item-action">L'edizione digitale VaSto</a>
+                    <a href="#che-cos-la-piattaforma-vasto-3" class="list-group-item list-group-item-action">Il prototipo (pilot version)</a>
+                    <a href="#che-cos-la-piattaforma-vasto-4" class="list-group-item list-group-item-action">L'autore</a>
+                    <div class="sidebar-heading pt-5" ><b>Cenni storici</b></div>
+                    <a href="#che-cos-la-piattaforma-vasto-5" class="list-group-item list-group-item-action">La storia del testo</a>
+                    <a href="#che-cos-la-piattaforma-vasto-6" class="list-group-item list-group-item-action">Principali testimoni manoscritti</a>
+                    <a href="#che-cos-la-piattaforma-vasto-7" class="list-group-item list-group-item-action">Bibliografia Essenziale</a>
+                  </div>
+                </div> -->
+
+                <div id="sidebar-wrapper">
+                  <div class="list-group list-group-flush" style="line-height:1">
+                  <a href="#introduction" class="list-group-item list-group-item-action"><b>Introduction</b></a>
+                  <a href="#layered-approach" class="list-group-item list-group-item-action"><b>Layered Approach</b></a>
+                  <a href="#layers-0-and-1--factual-data-and-assertions" class="list-group-item list-group-item-action"><b>&emsp;Layers 0 and 1: factual data and assertions</b></a>
+                  <a href="#what" class="list-group-item list-group-item-action">&emsp;WHAT</a>
+                  <a href="#items" class="list-group-item list-group-item-action">&emsp;&emsp;Items</a>
+                  <a href="#citations" class="list-group-item list-group-item-action">&emsp;&emsp;Citations</a>
+                  <a href="#works" class="list-group-item list-group-item-action">&emsp;&emsp;Works</a>
+                  <a href="#conceptual-categories" class="list-group-item list-group-item-action">&emsp;&emsp;Conceptual Categories</a>
+                  <a href="#where" class="list-group-item list-group-item-action">&emsp;WHERE</a>
+                  <a href="#when" class="list-group-item list-group-item-action">&emsp;WHEN</a>
+                  <a href="#who" class="list-group-item list-group-item-action">&emsp;WHO</a>
+                  <a href="#layer-2--provenance" class="list-group-item list-group-item-action"><b>&emsp;Layer 2: Provenance</b></a>
+                  <a href="#layer-3--publication-info" class="list-group-item list-group-item-action"><b>&emsp;Layer 3: Publication Info</b></a>
+                </div>
+              </div>
+
+                <!-- /#sidebar-wrapper -->
+            
+           
+            
+            
+                <!-- Page Content -->
+              <div id="page-content-wrapper">
+            
+                  <div class="container-fluid">
+                    <h1 id="mythologiae-datamodel">MythoLOD Datamodel</h1>
+                    <h2 id="introduction">Introduction</h2>
+                    <p>In this section is briefly presented how <a href="https://mima-data-model.github.io/mima-documentation/">MIMA (Documentation)</a> has been reused and integrated to satisfy Mythologiae dataset representational requirements and peculiarities.
+                    In the following sections is presented a brief overview of the 4 layered approach used to store and enhance Mythologiae data. 
+                    For more information about this approach, please see <a href="https://www.jlis.it/article/view/12642">&quot;Daquino, M., Pasqual, V., Tomasi, F. “Knowledge Representation of digital Hermeneutics of archival and literary Sources”</a>.</p>
+                    <h2 id="layered-approach">Layered Approach</h2>
+                    <p>The so called &quot;layered approach&quot; cosists in reusing <a href="http://nanopub.org/wordpress/">Nanopublication</a> structure to encode sets of information descibing each cultural object in Mythologiae collection. Nanopublication datamodel, as shown in the figure below is organised in 3 interconnected graphs: the assertion, provenance and publication information graphs. A fourth layer (layer 0 or factual data graph) has been added to cover the entire domain.
+                    Specifically, each layer (graph) stores a particular type of metadata.</p>
+                    <ul>
+                    <li>Layer 0. Factual data that are part of scholars’ background knowledge. In Mythologiae case we talk about descriptional metadata of cultural objects and literary works.</li>
+                    <li>Layer 1. The scope of scholars’ questionable statements. In Mythologiae specific case we talk about the hermeneutic analysis and cultural object-literary source association made by the experts.</li>
+                    <li>Layer 2. Context information for hypotheses assessment. In Mythologiae case we refer to the interpretative acts that lay behind each expert assertion.</li>
+                    <li>Layer 3. Provenance information of the mining processes. In Mythologiae case we encoded a few information about the RDF-dataset publication.</li>
+                    </ul>
+                    <img src="datamodel-imgs/struttura_mima_np.svg" alt="image info"> 
+                    <p>Approach to datamodelling activity:</p>
+                    <ul>
+                    <li>Design of the domain</li>
+                    <li>input csv cleaning into computable python format to generate rdf</li>
+                    <li>Competency questions for each of the modules (WHAT, WHERE, WHO, WHEN) and submodules (WHAT: items, works, citations, conceptual categories)</li>
+                    <li>refactorization of concepts in triple-fashion using existing ontologies</li>
+                    <li>data alignement with external sources (e.g. Perseus, VIAF)</li>
+                    <li>conversion of input csv in python format into rdf (with rdf lib) following the chosen ontologies structures</li>
+                    <li>manual checking of entities (e.g. URIs consistency, doubles elimination)</li>
+                    <li>perfomation of queries to find errors in data production (e.g. missing properties between individuals)</li>
+                    <li>performation of CQs to test datamodel and dataset representational requirements</li>
+                    <li>again, automatic, semiautomatic and manual adjustment of data</li>
+                    </ul>
+                    <p>This process has been performed sequentially and on each module and submodule.</p>
+                    <h3 id="layers-0-and-1-factual-data-and-assertions">Layers 0 and 1: factual data and assertions</h3>
+                    <p>The figure below represents layers 0 (factual data) and 1 (assertions) of the datamodel. All class and properties in the gray zone represent the assertion graph (layer 1) and all the other class and properties in white background represent factual data (layer 0). In particular, in level 0 are stored information about cultural objects and works descriptive metadata. In level 1 are stored the connections betweeen cultural objects representation (e.g. depicted scenes, conceptual value of the item), categories to which the cultural object is referred (e.g. the scene or theme depicted in the item), works and citations. For example, for what concerns the following scenario &quot;The cultural object X represents the category Y, which is mentioned in the citation Z and the work W&quot;, descriptive metadata about works and cultural object can be stored in factual data graph (level 1), while the association between X, Y and Z is stored in assertion A. </p>
+                    <p><img src="datamodel-imgs/layer0_layer1.svg" alt="image info">  </p>
+                    <p>For the sake of simplicity, Mythologiae Datamodel has been tested in modules. Those modules are named &#39;What&#39;, &#39;Where&#39;, &#39;When&#39;, &#39;Where&#39; - the four dimensions created by the reuse of an event-centric backbone ontology (FRBRoo). It is worth to underline that this research main interest is to investigate the &#39;What&#39; dimension, taking into consideration how it interacts with the other three modules. 
+                    In particular, the &#39;What&#39; dimension represents how citations mentioning works and items are linked together through the use of conceptual categories. &#39;When&#39;, &#39;Where&#39; and &#39;Who&#39; can be seen as three modules of addition information aiming to investigate in toto the &#39;What&#39; dimension. </p>
+                    <h4 id="what">WHAT</h4>
+                    <h5 id="items">Items</h5>
+                    <p>Items have been modelled with FRBRoo and dcterms. 
+                    Example: The figure below expresses the the item 775 and its metadata, along with its conceptual aspect which represents Teseus.<br><img src="datamodel-imgs/what-items.svg" alt="image info"></p>
+                    <p>URIs identifying items (efrbroo:F4_Manifestation_Singleton) are are incrementally numbered. </p>
+                    <h5 id="citations">Citations</h5>
+                    <p>Citations (Canonical Citations) has been modelled through the use of hucit.  </p>
+                    <p>Example in natural language: &quot;The passage &quot;Eneide, IV, 362-392&quot; refers to the abandon of Dido By Eneas&quot;. </p>
+                    <img src="datamodel-imgs/what-citations.svg" alt="image info">
+                    <p>URIs identifying citations (hucit:Citation) are incrementally numbered. URIs identifying textual elements of the canonical work (hucit:TextElement) follow the structure &quot;book number, line-line&quot;. URIs identifying works (hucit:Work) follows the strucuture &quot;author name, work name&quot; reconciled against viaf when possible.  </p>
+                    <h5 id="works">Works</h5>
+                    <p>Works have been modelled with FRBRoo. 
+                    Example in natural language: &quot;In &quot;Rime&quot; by Francesco Petrarca is take up the figure oF Arianna, princess of Cnosso&quot;
+                    <img src="datamodel-imgs/what-works.svg" alt="image info"></p>
+                    <p>URIs identifying works (hucit:Work) follows the strucuture &quot;author name, work name&quot; reconciled against viaf when possible.<br>Reconliciation against VIAF, why is this so important? 
+                    Considering the messy data input, most of the cited works has been slightly differently recorded as strings in the input csv (e.g. Boccaccio Giovanni --&gt; &quot;Della Genealogia degli dei&quot; oppure &quot;Genalogie Deorum Gentilium Libri&quot; oppure &quot;Genalogie Deorum Gentilium&quot; oppure &quot;Genalogie Deorum&quot;). VIAF reconciliation guarantees to reconduct all this different forms of the same work to a single controlled label (e.g. &quot;Boccaccio, Giovanni, 1313-1375. | Genealogia deorum&quot;) and identifier (e.g. 182235138). The controlled label has been reused to create the rdf-dataset internal corresponding URIs (e.g. myth-work:boccaccio-giovanni-genealogie-deorum).</p>
+                    <h5 id="conceptual-categories">Conceptual Categories</h5>
+                    <p>Conceptial categories (or simply categories) are the connection between each cultural object representation and the citation or works they refer to. In Mythologiae data, a 2 layers taxonomy has been populated. For example the category &quot;Enea fugge da Troia&quot; refers to the supercategory &quot;Enea&quot;. </p>
+                    <h4 id="where">WHERE</h4>
+                    <p>Example in natural language: &quot;Item 81 is currently stored in Altes Museum (Berlin, Germany)&quot;. </p>
+                    <p><img src="datamodel-imgs/where-museo-citta-nazione.svg" alt="image info"></p>
+                    <h4 id="when">WHEN</h4>
+                    <p>Example in natural language: &quot;Item 81 has been created between 320 and 340 b.C. (IV century b.C.) and belongs to the Classical era - Greek art&quot;.
+                    <img src="datamodel-imgs/when-items.svg" alt="image info"></p>
+                    <h4 id="who">WHO</h4>
+                    <p>Example in natural language: &quot;Item 102 has been created by Giogio de Chirico (1913 - contemporary art piece)&quot; and &quot;La sfida al labiritinto, literary source by Italo Calvino&quot;
+                    </p><img src="datamodel-imgs/who.svg" alt="image info">
+                    <h3 id="layer-2-provenance">Layer 2: Provenance</h3>
+                    <p>Starting from the abovementioned scenario &quot;The cultural object X represents the category Y, which is mentioned in the citation Z and the work W&quot;, which has been said, it is stored into the graph assertion A, we use provenance graph to define the contextual information about A. Assuming that each assertion is generated by an interpretation, in provenance graph we define who performed the interpretation, when, with which criterion and its type. 
+                    The following figures describes classes and properties reused in provenance graph. Such elements are mostly reused by HiCo and PROV. </p>
+                  </p><p><img src="datamodel-imgs/layer2.svg" alt="image info">
+                    <h3 id="layer-3-publication-info">Layer 3: Publication Info</h3>
+                    <p>Finally, in publication information graph are stored the information about the publication of each nanopublication. Information in this layer answers the questions such as: Who is responsible for the machine-readable version of the statement? When was it extracted? It represents the meta-context of a statement that has been automatically or semi-automatically generated.</p>
+                    <img src="datamodel-imgs/layer3.svg" alt="image info">
+                    
+                  </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+            </div>
+
+    
+        </section>
+
+    		<!-- Footer -->
+		    <footer class="py-3 bg-light" style="font-size:0.7em">
+          <div class="row pl-5 pr-5 mt-1 mb-0">
+            <div class="col-md-6 pl-5 pr-5">
+              <div class="row">
+                <div class="col-6 pb-1">
+                  <img src="../vendor/Logo_Progetto_IDEHA.png" style="max-width: 5rem; max-height: 4rem;margin-right: auto; margin-left: auto; display:block">
+                </div>
+                <div class="col-6 pb-1">
+                  <img src="../vendor/unibo_logo.png" style="max-width: 5rem; max-height: 4rem; margin-right: auto; margin-left: auto; display:block">
+                </div>
+                <img src="../vendor/pon_logo.png" style="max-width:100%">
+              </div>
+            </div>
+            <div class="col-md-3 pl-5 pr-5"><h6>Contatti</h6>
+              <p>Università di Bologna<br>
+                Dipartimento di Filologia Classica e Italianistica <a href="https://ficlit.unibo.it/it">(FICLIT)</a><br>
+                Via Zamboni 32<br>
+                40126 Bologna, Italia</p>
+              <p>
+                <strong>Email:</strong>
+                <a class="email-link" href="mailto:dharc@live.unibo.it">dharc@live.unibo.it</a>
+              </p>
+            </div>
+            <div class="col-md-3 pl-5 pr-5">
+              <p class="m-0">Images in mythLOD website has been reused from <a href="https://patrimonioculturale.unibo.it/mythologiae/">Mythologiae</a> digital collection</p>
+              <br>
+              <p class="m-0">&copy 2021 <a href="https://centri.unibo.it/dharc/en">/DH.arc</a> - mythLOD | dataset DOI: | <a href="../homepage/credits.html">Credits</a> <br><br>
+                <img alt="Licenza Creative Commons" style="border-width:0; max-height: 5rem;margin-right: auto; margin-left: auto; display:block" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png"></p>
+            </div>
+          </div> 
+        </footer>
+ 
+    
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

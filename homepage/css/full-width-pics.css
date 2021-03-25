@@ -1,0 +1,48 @@
+/*!
+ * Start Bootstrap - Full Width Pics (https://startbootstrap.com/template/full-width-pics)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-full-width-pics/blob/master/LICENSE)
+*/
+
+.navbar-brand {padding-left:0.5rem;margin-left: 0.5rem;} 
+
+.bg-image-full {
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.flex-button {color: white; font-size: 4rem; text-decoration: None;}
+.bg-image-full:hover {opacity: 0.6 !important;}
+a {text-decoration: none !important;}
+
+
+.query-container {
+  padding-left:4rem;
+  padding-right:4rem;
+  padding-top:0.5rem;
+  padding-bottom: 0.5rem;
+}
+pre {
+  padding-left:1rem; 
+  padding-right:1rem;
+  font-size:90%;
+}
+
+.trig-snippet {
+  margin-top:2rem;
+  margin-bottom:2rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
+.card {font-size:80%}
+
+table{font-size:80%; line-height: 1;}
+
+td {padding:0.2rem!important; overflow:hidden !important}
+
+
+.nav-item {}

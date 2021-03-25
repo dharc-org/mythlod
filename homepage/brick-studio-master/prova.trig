@@ -1,0 +1,460 @@
+@prefix schema: <http://schema.org/> .
+@prefix np:    <http://www.nanopub.org/nschema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix wdt:   <http://www.wikidata.org/prop/direct/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix co:    <http://purl.org/co/> .
+@prefix hucit: <http://purl.org/net/hucit#> .
+@prefix myth:  <https://w3id.org/mythLOD/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix efrbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix hico:  <http://purl.org/emmedi/hico/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix crm:   <http://www.cidoc-crm.org/cidoc-crm/> .
+
+
+myth:assertion449 a np:Assertion . 
+myth:provenance449 a np:Provenance . 
+myth:pubInfo449 a np:PunlicationInfo . 
+
+
+myth:factual_data {
+    
+    <https://w3id.org/mythLOD/item/449>
+        a                              efrbroo:F4_Manifestation_Singleton ;
+        ecrm:P2_has_type               <https://w3id.org/mythLOD/type/pittura-vascolare> ;
+        ecrm:P55_has_current_location  <https://w3id.org/mythLOD/place/museum-of-art-cleveland> ;
+        efrbroo:R42_is_representative_manifestation_singleton_for
+                <https://w3id.org/mythLOD/item/449-expression> ;
+        dct:note                       "Medea sul carro del Sole, dopo l’assassinio dei figli. \r\nCratere a calice lucano." ;
+        dct:subject                    "medea" , "carro" , "figlicida" ;
+        dct:title                      "Fuga di Medea" ;
+        schema:image                   "https://patrimonioculturale.unibo.it/mythologiae/wp-content/uploads/2019/04/Cleveland-cratere-Medea.jpg"^^xsd:anyURI .
+
+<https://w3id.org/mythLOD/time/400-a-c>
+        a                            ecrm:E52_Time-Span ;
+        rdfs:label                   "400a.C." ;
+        ecrm:P2_has_type             <https://w3id.org/mythLOD/type/anno> ;
+        crm:P82a_begin_of_the_begin  "0400-01-01"^^xsd:date ;
+        crm:P82b_end_of_the_end      "0400-01-01"^^xsd:date .
+
+<https://w3id.org/mythLOD/person/cerchia-del-pittore-di-policoro>
+        a           efrbroo:F10_Person ;
+        rdfs:label  "Cerchia del pittore di Policoro" .
+
+<https://w3id.org/mythLOD/time/arte-greca-eta-classica>
+        a                 ecrm:E4_Period ;
+        rdfs:label        "Arte greca - Età classica" ;
+        ecrm:P2_has_type  <https://w3id.org/mythLOD/type/periodo> ;
+        owl:sameAs        <https://www.wikidata.org/Q16064885> .
+
+<https://w3id.org/mythLOD/type/pittura-vascolare>
+        a           ecrm:P55_Type ;
+        rdfs:label  "Pittura vascolare" .
+
+<https://w3id.org/mythLOD/item/449-expression>
+        a                efrbroo:F2_Expression ;
+        dct:description  "Medea fugge sul carro dopo aver ucciso i figli, completando la vendetta nei confronti di Giasone" .
+
+<https://w3id.org/mythLOD/place/museum-of-art-cleveland>
+        a                      ecrm:E53_Place ;
+        rdfs:label             "Indianapolis Museum of Art" ;
+        ecrm:P2_has_type       <https://w3id.org/mythLOD/type/collocazione> ;
+        ecrm:P89_falls_within  <https://w3id.org/mythLOD/place/cleveland> , <https://w3id.org/mythLOD/place/united-states-of-america> ;
+        owl:sameAs             <http://sws.geonames.org/7123182> , <https://www.wikidata.org/Q1117704> , <http://worldcat.org/identities/lccn-n79063278> , <https://id.loc.gov/authorities/names/n79063278> ;
+        wdt:P625               "39.8259,-86.1855" .
+
+<https://w3id.org/mythLOD/item/449-creation>
+        a                        efrbroo:F28_Expression_Creation ;
+        ecrm:P10_falls_within    <https://w3id.org/mythLOD/time/arte-greca-eta-classica> ;
+        ecrm:P14_carried_out_by  <https://w3id.org/mythLOD/person/cerchia-del-pittore-di-policoro> ;
+        ecrm:P4_has_time_span    <https://w3id.org/mythLOD/time/v-secolo-a-c> , <https://w3id.org/mythLOD/time/400-a-c> ;
+        efrbroo:R17_created      <https://w3id.org/mythLOD/item/449-expression> ;
+        efrbroo:R18_created      <https://w3id.org/mythLOD/item/449> .
+
+<https://w3id.org/mythLOD/time/v-secolo-a-c>
+        a                            ecrm:E52_Time-Span ;
+        rdfs:label                   "V secolo a.C." ;
+        ecrm:P2_has_type             <https://w3id.org/mythLOD/type/secolo> ;
+        crm:P82a_begin_of_the_begin  "-0500-01-01Z"^^xsd:date ;
+        crm:P82b_end_of_the_end      "-0401-12-31Z"^^xsd:date ;
+        owl:sameAs                   <http://www.wikidata.org/entity/Q25339> .
+
+<http://purl.org/hucit/kb/works/tbd/902>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/971>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1022>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/915>
+        a       co:ListItem .
+
+<https://w3id.org/mythLOD/str/893-1027>
+        co:item  <http://purl.org/hucit/kb/works/tbd/964> , <http://purl.org/hucit/kb/works/tbd/944> , <http://purl.org/hucit/kb/works/tbd/1022> , <http://purl.org/hucit/kb/works/tbd/986> , <http://purl.org/hucit/kb/works/tbd/1021> , <http://purl.org/hucit/kb/works/tbd/985> , <http://purl.org/hucit/kb/works/tbd/1002> , <http://purl.org/hucit/kb/works/tbd/1019> , <http://purl.org/hucit/kb/works/tbd/1001> , <http://purl.org/hucit/kb/works/tbd/1018> , <http://purl.org/hucit/kb/works/tbd/989> , <http://purl.org/hucit/kb/works/tbd/969> , <http://purl.org/hucit/kb/works/tbd/909> , <http://purl.org/hucit/kb/works/tbd/954> , <http://purl.org/hucit/kb/works/tbd/1027> , <http://purl.org/hucit/kb/works/tbd/935> , <http://purl.org/hucit/kb/works/tbd/934> , <http://purl.org/hucit/kb/works/tbd/902> , <http://purl.org/hucit/kb/works/tbd/1004> , <http://purl.org/hucit/kb/works/tbd/997> , <http://purl.org/hucit/kb/works/tbd/996> , <http://purl.org/hucit/kb/works/tbd/937> , <http://purl.org/hucit/kb/works/tbd/920> , <http://purl.org/hucit/kb/works/tbd/898> , <http://purl.org/hucit/kb/works/tbd/897> , <http://purl.org/hucit/kb/works/tbd/916> , <http://purl.org/hucit/kb/works/tbd/962> , <http://purl.org/hucit/kb/works/tbd/981> , <http://purl.org/hucit/kb/works/tbd/961> , <http://purl.org/hucit/kb/works/tbd/966> , <http://purl.org/hucit/kb/works/tbd/946> , <http://purl.org/hucit/kb/works/tbd/990> , <http://purl.org/hucit/kb/works/tbd/987> , <http://purl.org/hucit/kb/works/tbd/1023> , <http://purl.org/hucit/kb/works/tbd/930> , <http://purl.org/hucit/kb/works/tbd/910> , <http://purl.org/hucit/kb/works/tbd/948> , <http://purl.org/hucit/kb/works/tbd/928> , <http://purl.org/hucit/kb/works/tbd/993> , <http://purl.org/hucit/kb/works/tbd/992> , <http://purl.org/hucit/kb/works/tbd/973> , <http://purl.org/hucit/kb/works/tbd/972> , <http://purl.org/hucit/kb/works/tbd/903> , <http://purl.org/hucit/kb/works/tbd/1006> , <http://purl.org/hucit/kb/works/tbd/1005> , <http://purl.org/hucit/kb/works/tbd/913> , <http://purl.org/hucit/kb/works/tbd/912> , <http://purl.org/hucit/kb/works/tbd/941> , <http://purl.org/hucit/kb/works/tbd/921> , <http://purl.org/hucit/kb/works/tbd/998> , <http://purl.org/hucit/kb/works/tbd/1024> , <http://purl.org/hucit/kb/works/tbd/942> , <http://purl.org/hucit/kb/works/tbd/922> , <http://purl.org/hucit/kb/works/tbd/939> , <http://purl.org/hucit/kb/works/tbd/938> , <http://purl.org/hucit/kb/works/tbd/919> , <http://purl.org/hucit/kb/works/tbd/918> , <http://purl.org/hucit/kb/works/tbd/983> , <http://purl.org/hucit/kb/works/tbd/963> , <http://purl.org/hucit/kb/works/tbd/947> , <http://purl.org/hucit/kb/works/tbd/967> , <http://purl.org/hucit/kb/works/tbd/977> , <http://purl.org/hucit/kb/works/tbd/976> , <http://purl.org/hucit/kb/works/tbd/957> , <http://purl.org/hucit/kb/works/tbd/904> , <http://purl.org/hucit/kb/works/tbd/1015> , <http://purl.org/hucit/kb/works/tbd/1014> , <http://purl.org/hucit/kb/works/tbd/949> , <http://purl.org/hucit/kb/works/tbd/994> , <http://purl.org/hucit/kb/works/tbd/974> , <http://purl.org/hucit/kb/works/tbd/899> , <http://purl.org/hucit/kb/works/tbd/984> , <http://purl.org/hucit/kb/works/tbd/1017> , <http://purl.org/hucit/kb/works/tbd/1020> , <http://purl.org/hucit/kb/works/tbd/915> , <http://purl.org/hucit/kb/works/tbd/1000> , <http://purl.org/hucit/kb/works/tbd/914> , <http://purl.org/hucit/kb/works/tbd/1016> , <http://purl.org/hucit/kb/works/tbd/968> , <http://purl.org/hucit/kb/works/tbd/908> , <http://purl.org/hucit/kb/works/tbd/1025> , <http://purl.org/hucit/kb/works/tbd/923> , <http://purl.org/hucit/kb/works/tbd/952> , <http://purl.org/hucit/kb/works/tbd/894> , <http://purl.org/hucit/kb/works/tbd/932> , <http://purl.org/hucit/kb/works/tbd/893> , <http://purl.org/hucit/kb/works/tbd/900> , <http://purl.org/hucit/kb/works/tbd/1010> , <http://purl.org/hucit/kb/works/tbd/959> , <http://purl.org/hucit/kb/works/tbd/978> , <http://purl.org/hucit/kb/works/tbd/905> , <http://purl.org/hucit/kb/works/tbd/926> , <http://purl.org/hucit/kb/works/tbd/925> , <http://purl.org/hucit/kb/works/tbd/906> , <http://purl.org/hucit/kb/works/tbd/1008> , <http://purl.org/hucit/kb/works/tbd/971> , <http://purl.org/hucit/kb/works/tbd/970> , <http://purl.org/hucit/kb/works/tbd/895> , <http://purl.org/hucit/kb/works/tbd/980> , <http://purl.org/hucit/kb/works/tbd/950> .
+
+<http://purl.org/hucit/kb/works/tbd/984>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/928>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/997>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/969>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/897>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/950>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/922>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1001>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/963>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/935>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1014>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/976>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/948>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1027>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/989>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/970>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/942>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/914>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1021>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/983>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/996>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1006>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/968>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1019>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/921>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/990>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1000>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/962>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/934>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/906>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/947>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/919>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/900>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/941>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/913>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1020>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/954>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/926>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1005>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/967>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/939>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1018>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/895>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/920>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/961>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/905>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/974>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/946>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1025>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/918>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/987>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/959>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/912>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/981>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/925>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1004>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/994>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/966>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/938>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1017>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/894>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/932>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/904>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/973>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1024>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/986>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/980>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/899>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/952>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/993>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/937>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/909>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1016>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/978>
+        a       co:ListItem .
+
+<https://w3id.org/mythLOD/cit/122>
+        hucit:has_content  <https://w3id.org/mythLOD/str/893-1027> .
+
+<http://purl.org/hucit/kb/works/tbd/893>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/903>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1010>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/972>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/944>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/916>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1023>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/985>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/957>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1008>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/998>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/910>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/898>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/923>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1002>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/992>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/964>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/908>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/1015>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/977>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/949>
+        a       co:ListItem .
+
+<http://purl.org/hucit/kb/works/tbd/930>
+        a       co:ListItem .
+
+<https://w3id.org/mythLOD/type/fonteMedievaleOModerna>
+        rdfs:label  "Fonte Medievale o Moderna" .
+
+<https://w3id.org/mythLOD/work/dolce-lodovico-medea>
+        a                 efrbroo:F1_Work ;
+        rdfs:label        "Dolce, Lodovico | Medea" ;
+        ecrm:P2_has_type  <https://w3id.org/mythLOD/type/fonteMedievaleOModerna> .
+
+<https://w3id.org/mythLOD/type/riscritturaLetteraria>
+        rdfs:label  "Riscrittura Letteraria" .
+
+<https://w3id.org/mythLOD/work/heyse-paul-medea>
+        a                 efrbroo:F1_Work ;
+        rdfs:label        "Heyse Paul | Medea " ;
+        ecrm:P2_has_type  <https://w3id.org/mythLOD/type/riscritturaLetteraria> .
+
+<https://w3id.org/mythLOD/type/riscritturaLetteraria>
+        rdfs:label  "Riscrittura Letteraria" .
+
+<https://w3id.org/mythLOD/work/olavo-agostino-al-di-la-del-fiume>
+        a                 efrbroo:F1_Work ;
+        rdfs:label        "Agostino Olavo | Al di la del fiume " ;
+        ecrm:P2_has_type  <https://w3id.org/mythLOD/type/riscritturaLetteraria> .
+
+<https://w3id.org/mythLOD/categ/medea-figlicida>
+        a           ecrm:E1_CRM_Entity ;
+        rdfs:label  "Medea figlicida" .
+
+}
+
+myth:assertion449 {
+    <https://w3id.org/mythLOD/cit/122>
+        ecrm:P67_refers_to  <https://w3id.org/mythLOD/categ/medea-figlicida> .
+
+    <http://purl.org/hucit/kb/works/tbd>
+            ecrm:P67_refers_to  <https://w3id.org/mythLOD/categ/medea-figlicida> .
+
+    <https://w3id.org/mythLOD/work/lenormand-henri-rene-asie>
+            ecrm:P67_refers_to  <https://w3id.org/mythLOD/categ/medea-figlicida> .
+
+    <https://w3id.org/mythLOD/work/dolce-lodovico-medea>
+            ecrm:P67_refers_to  <https://w3id.org/mythLOD/categ/medea-figlicida> .
+
+    <https://w3id.org/mythLOD/item/449-expression>
+            ecrm:P67_refers_to  <https://w3id.org/mythLOD/categ/medea-figlicida> .
+    }
+
+myth:provenance449 {
+    myth:assertion449 prov:wasGeneratedAtTime "2019-04-11T14:25:00"^^xsd:dateTime ;
+        prov:wasGeneratedBy  <https://w3id.org/mythLOD/int-act/449> .
+
+     <https://w3id.org/mythLOD/int-act/449> a prov:InterpretationAct ;
+        hico:hasInterpretationCriterion myth:sources-association ;
+        hico:hasInterpretationType myth:iconographic-approach ;
+        prov:wasAttributedTo  <https://w3id.org/mythLOD/person/gamba-hubert> .
+}
+
+myth:pubInfo449 {
+    myth:np-449 prov:wasAttributedTo  <https://w3id.org/mythLOD/person/dharc> ;
+        prov:wasGeneratedAtTime "2020-08-24T09:00:00"^^xsd:dateTime .
+}
+
+
+
+myth:head449 {
+    myth:np-449 a np:Nanopublication ;
+        np:hasAssertion myth:assertion449 ;
+        np:hasProvenance myth:provenance449 ;
+        np:hasPublicationInfo myth:pubInfo449 .
+}

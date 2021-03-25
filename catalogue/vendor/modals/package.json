@@ -1,0 +1,58 @@
+{
+  "name": "css-modal",
+  "title": "CSS Modal",
+  "description": "Modals, built with pure CSS",
+  "version": "1.5.0",
+  "homepage": "https://github.com/drublic/css-modal",
+  "author": {
+    "name": "Hans Christian Reinl",
+    "url": "http://drublic.de"
+  },
+  "main": "./js/index.js",
+  "style": "./bin/*.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drublic/css-modal"
+  },
+  "bugs": {
+    "url": "https://github.com/drublic/css-modal/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn run js:lint && yarn js:test",
+    "start": "concurrently \"yarn run server\" \"yarn run css:change\" \"yarn run js:change\"",
+    "server": "lite-server",
+    "css": "node ./scripts/css.js",
+    "css:change": "onchange 'css/**/*.css' -v -- yarn run css",
+    "js": "webpack",
+    "js:change": "webpack --watch",
+    "js:lint": "eslint js/{**/,}*.js",
+    "js:test": "jest",
+    "build": "npm run css && npm run js"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-latest": "^6.24.1",
+    "concurrently": "^4.1.0",
+    "css-mqpacker": "^7.0.0",
+    "eslint": "^6.0.0",
+    "lite-server": "^2.5.3",
+    "normalize.css": "^8.0.1",
+    "onchange": "^6.0.0",
+    "postcss": "^7.0.17",
+    "postcss-custom-media": "^7.0.8",
+    "postcss-custom-properties": "^9.0.1",
+    "postcss-import": "^12.0.1"
+  },
+  "dependencies": {},
+  "keywords": [
+    "css",
+    "modal"
+  ]
+}
