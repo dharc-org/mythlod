@@ -1,7 +1,6 @@
 /*
     DEMO STYLE
 */
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 body, .sidebar-header h3,
 .citsnippet .card .card-body p {  
@@ -12,9 +11,11 @@ h1, h2, h3, h4, h5, h6,
 #sidebar ul li a, 
 #sidebar .bottomline div, 
 .deselectstartover, .facetitem, .legenda,
-#navbarSupportedContent, nav{
+#navbarSupportedContent, nav, footer {
     font-family: 'Trebuchet MS', sans-serif !Important
 }
+
+footer {font-size:1em !important; color:black !important}
 
 ::-webkit-scrollbar {
     width: 10px;
