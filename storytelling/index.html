@@ -31,8 +31,8 @@
 
   <!-- Make versions of D3 cohexist in the same page -->
 
-  <script src="https://d3js.org/d3.v4.js"></script> 
-  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> 
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <script>
     d3version4 = d3
     window.d3 = null
@@ -44,11 +44,11 @@
     // test it worked
     console.log('v3', d3version3.version)
     console.log('v4', d3version4.version)
-  </script> 
+  </script>
 
 
-  
-    <!-- leaflet MAP 
+
+    <!-- leaflet MAP
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -64,7 +64,7 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script> -->
 
 <!-- BOKEH IMPORTS -->
-          
+
 <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js" integrity="sha384-kLr4fYcqcSpbuI95brIH3vnnYCquzzSxHPU6XGQCIkQRGJwhg0StNbj1eegrHs12" crossorigin="anonymous"></script>
 <script type="text/javascript"> Bokeh.set_log_level("info");</script>
 
@@ -79,7 +79,7 @@
 <!-- Load color palettes -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-<!--AJAX FOR ALL IMPORTS-->  
+<!--AJAX FOR ALL IMPORTS-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- =======================================================
@@ -133,16 +133,16 @@
 
   <span class="page_description" style="color:white;font-family: 'Trebuchet MS', sans-serif;">What is mythLOD digital collection?</span><!--
       <p>In mythLOD collection, each museal artefact has been analysed by an expert, which defined what the artefact represents (conceptual category). Additionally,
-        to some of these interpretations the expert added some literary references in which the scene is depicted. 
-         --> 
+        to some of these interpretations the expert added some literary references in which the scene is depicted.
+         -->
     </p>
       <div class="row m-md-2" style="color:#45505b">
         <div class="col-md-3 col-sm-6">
           <div class="card card-block explain-cards">
             <h5 class="card-title mt-3 mb-3">The mythLOD digital collection</h5>
             <img src="assets/img/artwork.svg">
-            <p class="card-text">mythLOD collection stores a large span of heterogeneous artworks, provided by different responsible entities, created in different periods and from different authors.</p> 
-            <p>mythlod contains<span class="card-numbers">4260 artworks</span></p> 
+            <p class="card-text">mythLOD collection stores a large span of heterogeneous artworks, provided by different responsible entities, created in different periods and from different authors.</p>
+            <p>mythlod contains<span class="card-numbers">4260 artworks</span></p>
             <div class="card-footer">For Example: item 308, entitled "Venere porge le armi ad Enea", by Giordano, Luca, 1634-1705</div>
       </div>
         </div>
@@ -151,23 +151,23 @@
             <h5 class="card-title  mt-3 mb-3">What artworks have in common?</h5>
             <div class="row">
               <div class="col-6">
-            <img src="assets/img/artwork.svg"> 
+            <img src="assets/img/artwork.svg">
           </div>
             <div class="col-6">
             <img src="assets/img/search.svg">
           </div>
-            </div> 
-            <p class="card-text">All the artworks represent a mythologic scene, which has been recognised by an expert.<br><b>Simplifying mythLOD datamodel, we can say an expert recognised a certain scene 
+            </div>
+            <p class="card-text">All the artworks represent a mythologic scene, which has been recognised by an expert.<br><b>Simplifying mythLOD datamodel, we can say an expert recognised a certain scene
               depicted in each artwork of mythLOD collection.
-            </b></p> 
+            </b></p>
             <div class="card-footer">For Example: Angelica Piras states that the item 308 represets the category Venere e l'armatura di Enea</div>
       </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="card card-block explain-cards">
             <h5 class="card-title  mt-3 mb-3">All the depicted scenes has been recorded by the experts, according to an internal taxonomy</h5>
-            <p class="card-text">Here you can see all the categories (or scenes) of the taxonomy which will be reused in the storytelling below</p> 
-            <div class="overflow-auto card-footer" id='list-puntate' style="max-height:10rem; font-size:0.8rem"></div> 
+            <p class="card-text">Here you can see all the categories (or scenes) of the taxonomy which will be reused in the storytelling below</p>
+            <div class="overflow-auto card-footer" id='list-puntate' style="max-height:10rem; font-size:0.8rem"></div>
       </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -176,7 +176,7 @@
 
             <div class="row">
               <div class="col-4">
-            <img src="assets/img/artwork.svg"> 
+            <img src="assets/img/artwork.svg">
           </div>
             <div class="col-4">
             <img src="assets/img/search.svg">
@@ -184,20 +184,20 @@
           <div class="col-4">
             <img src="assets/img/books-stack-of-three.svg">
           </div>
-            </div> 
+            </div>
             <p>The result is that artworks have been linked to some literary reference due to what they represent.</p>
-            <div class="card-footer">For example: Hubert Gamba states also that category Venere e l'armatura di Enea can be found also in Aeneid, VIII, vv. 607-731</div> 
+            <div class="card-footer">For example: Hubert Gamba states also that category Venere e l'armatura di Enea can be found also in Aeneid, VIII, vv. 607-731</div>
       </div>
-        </div>    
+        </div>
       </div>
       <p class="page_description m-2 p-2" style="color:white; font-family: 'Trebuchet MS', sans-serif;">
       By analysing these aspects, we found out that Aeneid by Virgil is one of the most referred literary source in mythLOD dataset. </p>
       <p class="page_description m-2 p-2" style="color:white; font-family: 'Trebuchet MS', sans-serif;"> In this page the Aeneis are presented from mythLOD perspective. Additionally, the available visualisations focus on
-          <b>W</b>hat (representing artefacts, literary sources and categories), <b>W</b>here (e.g. places where the items are located), 
+          <b>W</b>hat (representing artefacts, literary sources and categories), <b>W</b>here (e.g. places where the items are located),
           <b>W</b>hen (e.g. date of an artefact creation), <b>W</b>ho (representing people involved into the creation of artefacts).</p>
     </div>
-    
- </section> 
+
+ </section>
 
      <!-- ======= WHEN Section ======= -->
      <section id="when" class="when">
@@ -205,8 +205,8 @@
 
         <!-- <div class="section-title float-right">
           <h2 class="text-right">When</h2>
-        
-      </div>     -->      
+
+      </div>     -->
 
         <div class="row">
           <div class="col-sm-12 col-md-3">
@@ -222,7 +222,7 @@
             </div>
           </div>
           <div class="col-sm-12 col-md-9">
-          <iframe id="iframe-timeline" src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1IJkxDCrBZKBI03Ffwcx0wG6bhplb4gox0-IHh_H0SAM&font=Default&lang=en&start_at_end=true&initial_zoom=7&start_at_slide=100&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+          <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1nwjxUcHNaclYVLmrtwMEAuHwDGEzicUWYW2DefSGfyk&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
         </div>
 
 
@@ -284,7 +284,7 @@
               </div>
               </div>
             </div> -->
-    
+
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="box arrow-right mb-auto">
@@ -301,14 +301,14 @@
               <div id="heatmap"></div>
             </div>
             </div>
-    
-    
-            <div class="row"> 
-            
+
+
+            <div class="row">
+
               <div class="col-sm-12 col-md-8 m-0 p-0">
                 <div class="box arrow-bottom">
                   Going deeply with conceptual categories (depicted scenes), below are represented together all the keywords and conceptual categories shared between the museal objects and Aneis, taking into account how many times they co-occur
-                  in mythLOD dataset.  
+                  in mythLOD dataset.
                 </div>
                 <div id="wordcloud"></div>
                 <div class="box arrow-right mb-3">
@@ -323,28 +323,28 @@
                 <div class="mt-auto mb-auto" id="top10BarsCategs"></div>
                 <div class="mt-auto mb-auto" id="top10BarsKeywords"></div>
             </div>
-              
+
           </div>
 
-         <div class="row"><div id="my_dataviz"></div></div> 
+         <div class="row"><div id="my_dataviz"></div></div>
 
-          <div class="row"> 
+          <div class="row">
             <div class="col-md-12 col-lg-4 m-0 p-0"><div class="box arrow-right">
-              <p>Moreover, Aeneis can be considered both a set of cited lines (as we have seen in the <a href='#heatmap' data-aos="fade-up">heamap</a> visualisation) but also as a whole literary source 
+              <p>Moreover, Aeneis can be considered both a set of cited lines (as we have seen in the <a href='#heatmap' data-aos="fade-up">heamap</a> visualisation) but also as a whole literary source
               (<code>frbr:F1_Work</code>). </p>
-              <p>In each mythLOD assertion, a museal object shares one or more common themes (conceptual categories) with one or more literary sources from different authors and periods. 
-                <b>And so, which are all the literary references which co-occur with Aeneis?</b> 
+              <p>In each mythLOD assertion, a museal object shares one or more common themes (conceptual categories) with one or more literary sources from different authors and periods.
+                <b>And so, which are all the literary references which co-occur with Aeneis?</b>
               </p>
 
               <p>The result is the network here presented, which shows the literary sources and categories connection. What emerges, is the pink set showing that Aeneis shows most
-                categories mainly with four other works: 
+                categories mainly with four other works:
                 <ul>
                   <li>Petrarca Francesco, 1304-1374 | Trionfi </li>
                   <li>Ungaretti Giuseppe | Vita di un Uomo </li>
                   <li>Dante Alighieri, 1265-1321 | Divina Commedia </li>
                   <li>Leopardi Giacomo, 1798-1837 | Canti </li>
                 </ul>
-                Sharing the same 23 recurrent themes. 
+                Sharing the same 23 recurrent themes.
                     <p>
 
             </div></div>
@@ -352,24 +352,24 @@
           </div>
         </div>
         </section>
-        
-        
-        
-        
+
+
+
+
         <!-- End WHAT Section -->
 
 
     <!-- ======= WHO Section ======= -->
     <section id="who" class="who section-bg">
       <div class="container container-fluid" data-aos="fade-up">
-    <div class="row"> 
+    <div class="row">
       <div class="col-md-12 col-lg-4 m-0 p-0">
-        <div class="row"> 
+        <div class="row">
         <div class="box arrow-right">
           The graph represents <span style="font-family: 'Trebuchet MS', sans-serif !Important">&#8220;Which are the the authors which created an artworks whose depicted scene has been also recognised to be in common with Aeneid?&#8221;</span>
-        </div>  
         </div>
-      <div class="row"> 
+        </div>
+      <div class="row">
         <div class="box arrow-right">
           <p>The graph shows the connections between Aeneid themes, artwork themes and their authors</p>
           <p>Moreover, as in the previous graph, it is possible to look at some automatic clustering effect (Modularity class and color in the figure). Modularity classes have been automatically added depending on
@@ -419,8 +419,8 @@
             <p class="m-0">&copy 2021 Valentina Pasqual @ <a href="https://centri.unibo.it/dharc/en">/DH.arc</a> - mythLOD | dataset DOI: <a href="https://doi.org/10.5281/zenodo.4639821">10.5281/zenodo.4639821</a> | <a href="../static/credits.html">Credits</a> | <a href="../static/documentation.html">Technical Documentation</a><br><br>
               <img alt="Licenza Creative Commons" style="border-width:0; max-height: 5rem;margin-right: auto; margin-left: auto; display:block" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png"></p>
             </div>
-          </div> 
-          </footer>		
+          </div>
+          </footer>
 
   <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
   <div id="preloader"></div>
@@ -449,12 +449,12 @@
   </script>
 
 
-<!-- PERSONAL CSS OVER IFRAMES 
+<!-- PERSONAL CSS OVER IFRAMES
 <script>
   var cssLink = document.createElement("link");
-  cssLink.href = "assets/css/style.css"; 
-  cssLink.rel = "stylesheet"; 
-  cssLink.type = "text/css"; 
+  cssLink.href = "assets/css/style.css";
+  cssLink.rel = "stylesheet";
+  cssLink.type = "text/css";
   frames['iframe-timeline'].contentDocument.head.appendChild(cssLink);
   console.log(frames['iframe-timeline'].contentDocument.head.appendChild(cssLink))
   </script>
@@ -492,7 +492,7 @@
 
 
   <!-- data-visualisations other js files-->
-  
+
 <!-- <script type='text/javascript' src='data/map/markers.js'></script>
 <script type='text/javascript' src='data/map/leaf-demo.js'></script> -->
 <!-- <script type="text/javascript" src="Horizontal-Vertical-Timeline-Plugin-jQuery/dist/js/timeline.min.js"></script> -->
