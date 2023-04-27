@@ -255,6 +255,7 @@ var item_template =
           '<div class="card" style="box-sizing: inherit;"><img class="card-img-top box-sizing:inherit" src="<%= obj.img %>"><div class="card-body">' + 
         '<p class="tags">' + 
              '<div><h4 style="text-decoration-color:#ffc107">Factual Data</h4><div class="factual_data"><b>Title: </b><%= obj.title %>' +
+    	     '<% if (obj.item) {  %> <br><b>ID:</b> <%= obj.item.replace('https://dharc-org.github.io/mythologiae/', '') %>' + 
              '<% if (obj.item_author_label) {  %> <br><b>Author:</b> <%= obj.item_author_label %><a href="<%= obj.item_author_viaf %>" target="_blank"><img src="http://viaf.org/images/viaf.ico" style="height:16px;width:16px"></a><% } %>' +
              '<% if (obj.keywords) %><br><b>Keywords: </b><% {%> <%= _.each(obj.keywords, function(k, index){__p.push(\'<span class="badge badge-outline-dark mr-1">\',k,\'</span>\')})%><% } %>' + 
              '<% if (obj.item_type_label){  %><br><b>Typology:</b> <%= obj.item_type_label %> <% } %>' +
